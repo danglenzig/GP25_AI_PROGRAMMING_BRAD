@@ -1,0 +1,21 @@
+# Unreal build output
+AI_PROGRAMMING_ASSIGNMENT/Binaries/
+AI_PROGRAMMING_ASSIGNMENT/Build/
+AI_PROGRAMMING_ASSIGNMENT/Intermediate/
+AI_PROGRAMMING_ASSIGNMENT/Saved/
+AI_PROGRAMMING_ASSIGNMENT/DerivedDataCache/
+AI_PROGRAMMING_ASSIGNMENT/FileOpenOrder/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Compiled files
+*.pdb
+*.exp
+*.lib
+
+# Exclude packaged builds
+*.pak
+*.sig
