@@ -68,7 +68,7 @@ Lvl_TopDown/ (Editor)
 |--WorldPartitionMiniMap0
 ```
 
-### NPC Architecture
+### NPC Component Architecture
 ```mermaid
 flowchart TD
     CHAR[NPC Character]
