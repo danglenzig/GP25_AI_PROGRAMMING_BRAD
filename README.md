@@ -39,7 +39,7 @@ Content/
 
 ## NPC Implementation
 
-## Outliner Hiererchy
+### Outliner Hiererchy
 ```
 Lvl_TopDown/ (Editor)
 |--NPCS/
