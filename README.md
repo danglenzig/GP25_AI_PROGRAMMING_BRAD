@@ -46,7 +46,7 @@ Lvl_TopDown/ (Editor)
 |  |--Team_00/ (RED guys)
 |  |  |--NPC_00_00/
 |  |  |  |--NPC_00_00_Character
-|  |  |  |--PatrolPoints/
+|  |  |  |--PatrolPoints/ (serialized into character from the outliner)
 |  |  |  |  |--TargetPoint_00
 |  |  |  |  |--TargetPoint_01
 |  |  |  |  |--(and so on)
