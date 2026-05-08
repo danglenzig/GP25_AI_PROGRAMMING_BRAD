@@ -26,14 +26,49 @@ Content/
 |  |  |  |--(BT tasks & services blueprints)
 |
 (Template-provided folders & content)
-|--Characters...
-|--Cursor...
-|--LevelPrototyping...
-|--TopDown...
+|--Characters/
+|  |--...
+|--Cursor/
+|  |--...
+|--LevelPrototyping/
+|  |--...
+|--TopDown/
+|  |--...
 
 ```
 
 ## NPC Implementation
+
+## Outliner Hiererchy
+```
+Lvl_TopDown/ (Editor)
+|--NPCS/
+|  |--Team_00/ (RED guys)
+|  |  |--NPC_00_00/
+|  |  |  |--NPC_00_00_Character
+|  |  |  |--PatrolPoints/
+|  |  |  |  |--TargetPoint_00
+|  |  |  |  |--TargetPoint_01
+|  |  |  |  |--(and so on)
+|  |  |--NPC_00_01/
+|  |  |  |-- (and so on)
+|  |--Team_01/ (GREEN guys)
+|  |  |--(and so on)
+|
+(Template-provided game objects)
+|--Lighting/
+|  |--...
+|--Navigation/
+|  |--...
+|--Playground/
+|  |--...
+|--PlayerStart
+|--RecastNavMesh-Default
+|--WorldDataLayers
+|--WorldPartitionMiniMap0
+```
+
+### NPC Architecture
 ```mermaid
 flowchart TD
     CHAR[NPC Character]
