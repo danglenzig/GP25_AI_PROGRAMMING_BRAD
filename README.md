@@ -103,8 +103,7 @@ The BP exposes the following configuration variables to the outliner:
 
 The NPC character also maintains an internal integer index indicating which patrol point is the current one, `currentPatrolPointIndex`
 
-![NPC variables](npc_character_vars.png)
-![NPC in the outliner](npc_character_outliner.png)
+![NPC variables](npc_character_vars.png) ![NPC in the outliner](npc_character_outliner.png)
 
 ### Blueprint Functions
 The NPC character BP implements two functions:
