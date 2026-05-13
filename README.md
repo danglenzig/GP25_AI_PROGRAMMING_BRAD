@@ -119,8 +119,15 @@ The NPC character BP implements two functions:
 Both of these functions are used by BT_NPC_BehaviorTree implementation, discussed below.
 
 ## NPC Controller
-
+### EventGraph
 ![NPC Controller Event Graph](npc_controller_event_graph.png)
+### Blueprint Variables
+...
+### Blueprint Functions
+...
+### AI Perception
+...
+
 
 TODO: discuss...
 * Character BP
