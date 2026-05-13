@@ -95,12 +95,19 @@ flowchart TD
     SRVC -->|Writes data to| BLAK
 ```
 ## NPC Character
-The NPC character is implemented as blueprint BP_NPC_00_Character. This is the actor that owns the NPC controller (below), and is placed in level ouliner. The BP exposes the following configuration variables to the outliner:
+The NPC character is implemented as blueprint BP_NPC_00_Character. This is the actor that owns the NPC controller (below), and is placed in level ouliner. 
+### Blueprint Variables
+The BP exposes the following configuration variables to the outliner:
 - PatrolPoints: An array of TargetPoint objects that indicate the locations of the NPCs looping patrol behavior.
 - BaseWaitTime: A float that respresents the amount of time the NPC will rest at each patrol point before moving on to the next.
+The NPC character also maintains an internal integer index indicating which patrol point is the current one.
+
 ![NPC variables](npc_character_vars.png)
 ![NPC in the outliner](npc_character_outliner.png)
-The NPC character also maintains an internal integer index indicating which patrol point is the current one.
+
+### Blueprint Functions
+The 
+
 
 
 ![IncrementPatrolPoint](npc_character_increment_patrol_point.png)
