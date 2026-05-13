@@ -116,7 +116,11 @@ The NPC character BP implements two functions:
 
 ![IncrementPatrolPoint](npc_character_increment_patrol_point.png)
 
-Both of these functions are called by BT_NPC_BehaviorTree
+Both of these functions are used by BT_NPC_BehaviorTree implementation, discussed below.
+
+## NPC Controller
+
+![NPC Controller Event Graph](npc_controller_event_graph.png)
 
 TODO: discuss...
 * Character BP
