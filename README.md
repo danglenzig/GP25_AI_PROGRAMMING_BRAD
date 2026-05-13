@@ -95,7 +95,7 @@ flowchart TD
     SRVC -->|Writes data to| BLAK
 ```
 ## NPC Character
-The NPC character is implemented as blueprint BP_NPC_00_Character. This is the actor that owns the NPC controller (below), and is placed in level ouliner. 
+The NPC character is implemented as blueprint BP_NPC_00_Character. This is the actor that owns the NPC controller (below), and is placed in level ouliner. This class inherits from the built-in `Character` blueprint, and uses the built-in "Quinn" character mesh.
 ### Blueprint Variables
 The BP exposes the following configuration variables to the outliner:
 - `PatrolPoints`: An array of `TargetPoint` objects that indicate the locations of the NPCs looping patrol behavior.
@@ -115,6 +115,8 @@ The NPC character BP implements two functions:
 - `IncrementCurrentPatrolPoint`: Increments the value of `currentPatrolPointIndex`, modulated by the size of the `PatrolPoints` array.
 
 ![IncrementPatrolPoint](npc_character_increment_patrol_point.png)
+
+Both of these functions are called by BT_NPC_BehaviorTree
 
 TODO: discuss...
 * Character BP
