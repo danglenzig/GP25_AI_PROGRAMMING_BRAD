@@ -121,9 +121,14 @@ Both of these functions are used by BT_NPC_BehaviorTree implementation, discusse
 ### EventGraph
 ![NPC Controller Event Graph](npc_controller_event_graph.png)
 ### Blueprint Variables
-...
-### Blueprint Functions
-...
+The NPC controller has four internal variables of type `Name`, which hold the names of the blackboard keys that the controller must manipulate:
+| `Name` variable name         | Value |
+|------------------------------|-------|
+| `CanSeePlayerKey`            | "CanSeePlayer" |
+| `LastKnownPlayerLocationKey` | "LastKnownPlayerLocation" |
+| `IsChasingPlayerKey`         | "IsChasingPlayer" |
+| `PlayerActorKey`             | "PlayerActor" |
+
 ### AI Perception
 ...
 
