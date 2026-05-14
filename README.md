@@ -129,6 +129,7 @@ The NPC controller event graph defines behavior for two events...
         2) `PlayerActor`
         3) `CanSeePlayer`
         4) `IsChasingPlayer`
+        
         The meaning of these keys is discussed below in the blackboard section.
     - *If the perception target is un-sensed* the EG sets the `CanSeePlayer` key to false. Importantly, the EG *does not* unset the `IsChasingPlayer` key here. This is because the NPC is expected to continue puruing the player to its last known location and pause before returning to the patrol behavior.
 
