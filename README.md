@@ -123,15 +123,15 @@ Both of these functions are used by BT_NPC_BehaviorTree implementation, discusse
 
 The NPC controller event graph defines behavior for two events...
 - *Event Begin Play*: When the game starts, the EG associates itself with the behavior tree `BT_NPC_00_BehaviorTree` (discussed below), and initiates its activity.
-- *Event Target Perception Updated*: Most of the controllers logic is centered around this event. When the controller's `AIPerception` component (discussed below) signals that the player actor has entered or exited its perception field, it triggers the following logic:
+- *Event Target Perception Updated*: Most of the controller's logic is centered around this event. When the controller's `AIPerception` component (discussed below) signals that the player actor has entered or exited its perception field, it triggers the following logic:
+
     - *If the perception target is sensed* the EG updates the following blackboard keys in order:
         1) `LastKnownPlayerLocation`
-        2) `PlayerActor`
-        3) `CanSeePlayer`
-        4) `IsChasingPlayer`
+        2) `CanSeePlayer`
+        3) `IsChasingPlayer`
 
         The meaning of these keys is discussed below in the blackboard section.
-    - *If the perception target is un-sensed* the EG sets the `CanSeePlayer` key to false. Importantly, the EG *does not* unset the `IsChasingPlayer` key here. This is because the NPC is expected to continue puruing the player to its last known location and pause before returning to the patrol behavior.
+    - *If the perception target is un-sensed* the EG sets the `CanSeePlayer` key to false. Importantly, the EG *does not* unset the `IsChasingPlayer` key here. This is because the NPC is expected to continue pursuing the player to its last known location and pause before returning to the patrol behavior.
 
 ### Blueprint Variables
 The NPC controller has four internal variables of type `Name`, which hold the names of the blackboard keys that the controller must manipulate:
@@ -140,16 +140,15 @@ The NPC controller has four internal variables of type `Name`, which hold the na
 | `CanSeePlayerKey`            | "CanSeePlayer" |
 | `LastKnownPlayerLocationKey` | "LastKnownPlayerLocation" |
 | `IsChasingPlayerKey`         | "IsChasingPlayer" |
-| `PlayerActorKey`             | "PlayerActor" |
 
 ### AI Perception
 The NPC controller `AIPerception` component is configured with one sense (`AISense_Sight`)
 ![AIPerception](npc_controller_ai_perception.png)
 
+## The NPC Blackboard
+
 
 TODO: discuss...
-* Character BP
-* Controller BP
 * Blackboard
 * Behavior Tree
 * Behavior Tree Tasks
