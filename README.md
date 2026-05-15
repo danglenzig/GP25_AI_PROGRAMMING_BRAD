@@ -183,7 +183,11 @@ In undecorated sequence:
 
 2) In simple parallel, move to the current `MoveTarget` and play the jog animation.
 
-3) When the current
+3) When the current `MoveTarget` is reached, call the NPC character's `IncrementPatrolPoint` function. This will cause the character to return the transform location of the next `TargetPoint` in its `PatrolPoints` array the next time `GetCurrentPatrolPointLoc` is called.
+
+![Update patrol point](npc_bt_set_update_patroll_point_task.png)
+
+4) In simple parallel, wait for the amount of time indicated in the `WaitSeconds` blackboard key and play the idle animation.
 
 ### Chase Behavior
 
