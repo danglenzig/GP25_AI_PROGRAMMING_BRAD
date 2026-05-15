@@ -158,8 +158,25 @@ The NPC blackboard, `BB_NPC_00_Blackboard`, has six keys that inform the NPC beh
 
 ![NPC Blackboard](npc_blackboard.png)
 
-TODO: discuss...
-* Blackboard
-* Behavior Tree
-* Behavior Tree Tasks
-* Behavior Tree Services
+## The NPC Behavior Tree
+
+The NPC behavior tree, `BT_NPC_00_BehaviorTree`, implements two distinct behaviors:
+
+- Patrolling behavior: The NPC is moving from between patrol points in sequence
+- Chase behavior: The NPC is actively pursuing the player actor
+
+The chase behavior has two sub-branches, based on whether or not the player actor is currently sensed by AI perception
+
+- *The player is sensed*: ...
+- *The player is not sensed*: ...
+
+![Behavior Tree](npc_behavior_tree.png)
+
+### Patrolling Behavior:
+
+...
+
+### Chase Behavior
+
+...
+
