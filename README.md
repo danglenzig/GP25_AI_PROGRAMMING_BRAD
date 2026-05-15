@@ -178,7 +178,12 @@ In undecorated sequence:
 1) Set the move target with task `BTT_NPC_00_SetMoveTarget`
 
 ![Set move target](npc_bt_set_move_target_task.png)
-...
+
+(discuss set move target task)
+
+2) In simple parallel, move to the current `MoveTarget` and play the jog animation.
+
+3) When the current
 
 ### Chase Behavior
 
