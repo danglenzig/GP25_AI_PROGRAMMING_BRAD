@@ -174,6 +174,10 @@ The chase behavior has two sub-branches, based on whether or not the player acto
 
 ### Patrolling Behavior:
 
+In undecorated sequence:
+1) Set the move target with task `BTT_NPC_00_SetMoveTarget`
+
+![Set move target](npc_bt_set_move_target_task.png)
 ...
 
 ### Chase Behavior
