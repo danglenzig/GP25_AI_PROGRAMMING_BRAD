@@ -90,10 +90,13 @@ flowchart TD
     CONT -->|Runs| TREE
     TREE -->|Reads data from| BLAK
     TREE -->|Implements| TASK
-    TREE -->|Implements| SRVC
+    TREE -.->|Implements| SRVC
     TASK -->|Reads & writes data to| BLAK
-    SRVC -->|Writes data to| BLAK
+    SRVC -.->|Writes data to| BLAK
 ```
+
+*Note: The current implementation does not use a blackboard service. I originally had a service that updates the `CanSeePlayer` blackboard value, but I moved this functionality into the NPC controller during refactoring.*
+
 ## NPC Character
 The NPC character is implemented as blueprint BP_NPC_00_Character. This is the actor that owns the NPC controller (below), and is placed in level ouliner. This class inherits from the built-in `Character` blueprint, and uses the built-in "Quinn" character mesh.
 ### Blueprint Variables
