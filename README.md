@@ -95,7 +95,7 @@ flowchart TD
     SRVC -.->|Writes data to| BLAK
 ```
 
-*Note: The current implementation does not use a blackboard service. I originally had a service that updates the `CanSeePlayer` blackboard value, but I moved this functionality into the NPC controller during refactoring.*
+*Note: The current implementation does not use a blackboard service. I originally had a service attached to the behavior tree's root selector that updates the `CanSeePlayer` blackboard value, but I moved this functionality into the NPC controller during refactoring.*
 
 ## NPC Character
 The NPC character is implemented as blueprint BP_NPC_00_Character. This is the actor that owns the NPC controller (below), and is placed in level ouliner. This class inherits from the built-in `Character` blueprint, and uses the built-in "Quinn" character mesh.
@@ -178,6 +178,7 @@ The chase behavior has two sub-branches, based on whether or not the player acto
 ### Patrolling Behavior:
 
 In undecorated sequence:
+
 1) Set the move target with task `BTT_NPC_00_SetMoveTarget`
 
 ![Set move target](npc_bt_set_move_target_task.png)
@@ -194,5 +195,8 @@ In undecorated sequence:
 
 ### Chase Behavior
 
-...
+If the player is sensed by AI perception, then in undecorated sequence:
 
+1) Set `LastKnownPlayerLocation` according to the the player's current transform location and velocity.
+
+![Set chase target](npc_bt_set_chase_target_task.png)
