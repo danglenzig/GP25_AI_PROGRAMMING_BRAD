@@ -152,7 +152,7 @@ The NPC controller `AIPerception` component is configured with one sense (`AISen
 ## The NPC Blackboard
 
 The NPC blackboard, `BB_NPC_00_Blackboard`, has six keys that inform the NPC behavior tree and in turn govern the NPC behavior:
-- `SelfActor`: Build in self reference
+- `SelfActor`: Built in self reference
 - `MoveTarget`: Holds the transform location of the current patrol point
 - `WaitSeconds`: The amount of time the NPC lingers at each patrol point before moving on
 - `CanSeePlayer`: Whether or not the player actor is currently sensed by AI perception
