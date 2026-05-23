@@ -180,8 +180,6 @@ In undecorated sequence:
 
 ![Set move target](npc_bt_set_move_target_task.png)
 
-(discuss set move target task event graph)
-
 2) In simple parallel, move to the current `MoveTarget` location and play the jog animation.
 
 3) When the current `MoveTarget` is reached, call the NPC character's `IncrementPatrolPoint` function. This will cause the character to return the transform location of the next `TargetPoint` in its `PatrolPoints` array the next time `GetCurrentPatrolPointLoc` is called.
@@ -198,8 +196,6 @@ In undecorated sequence:
 
 ![Set chase target](npc_bt_set_chase_target_task.png)
 
-(discuss set chase target task event graph)
-
 2) In simple parallel, move to the current `LastKnownPlayerLocation` and play the jog animation.
 
 *If the player is not sensed by AI perception, but the NPC has not yet reached the `LastKnownPlayerLocation` per the decorator for this branch*, then in sequence:
@@ -212,4 +208,5 @@ In undecorated sequence:
 
 ![Stop chasing](npc_bt_stop_chasing_task.png)
 
-(todo discuss priority and preemption)
+## Reflections
+...
