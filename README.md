@@ -16,6 +16,7 @@ The setting is ComicCon. The player character is awashed-up former celebrity who
 
 ### Video Link
 [https://www.youtube.com/watch?v=JG_WnsNACF4](https://www.youtube.com/watch?v=JG_WnsNACF4)
+
 [![Demo video clip](https://img.youtube.com/vi/JG_WnsNACF4/0.jpg)](https://www.youtube.com/watch?v=JG_WnsNACF4)
 
 
@@ -211,6 +212,3 @@ In undecorated sequence:
 3) If `LastKnownPlayerLocation` is reached and the branch has not been preempted, then unset the `IsChasingPlayer` blackboard key. This will cause the BT to revert to the patrol branch.
 
 ![Stop chasing](npc_bt_stop_chasing_task.png)
-
-## Reflections
-...
