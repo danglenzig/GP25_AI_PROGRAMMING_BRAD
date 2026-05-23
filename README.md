@@ -166,12 +166,9 @@ The NPC blackboard, `BB_NPC_00_Blackboard`, has six keys that inform the NPC beh
 The NPC behavior tree, `BT_NPC_00_BehaviorTree`, implements two distinct behaviors:
 
 - Patrolling behavior: The NPC is moving from between patrol points in sequence
-- Chase behavior: The NPC is actively pursuing the player actor
-
-The chase behavior has two sub-branches, based on whether or not the player actor is currently sensed by AI perception
-
-- *The player is sensed*: ...
-- *The player is not sensed*: ...
+- Chase behavior: The NPC is actively pursuing the player actor. This branch has two distict sub-branches:
+  - While the player is sensed by AI perception (sight), then the chase target is continuously updated with the player's transform location plus the player's directional velocity. If the player is standing still, then the chase target is simply the player's transform location. If the player is moving, then the chase target is a position slightly in front of the player in the direction of movement.
+  - If the player becomes unsensed, then the chase target is no longer updated and the chase target is the last known player position. When the NPC reaches that position, it waits a configurable number of seconds. If the player remains unsensed during that interval, then the `IsChasingPlayer` is flipped and the NPC reverts to its patrolling behavior.
 
 ![Behavior Tree](npc_behavior_tree.png)
 
