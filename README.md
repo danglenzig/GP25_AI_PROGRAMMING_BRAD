@@ -15,6 +15,7 @@ The setting is ComicCon. The player character is awashed-up former celebrity who
 *Source control*: Git with LFS support
 
 ### Video Link
+[https://www.youtube.com/watch?v=JG_WnsNACF4](https://www.youtube.com/watch?v=JG_WnsNACF4)
 [![Demo video clip](https://img.youtube.com/vi/JG_WnsNACF4/0.jpg)](https://www.youtube.com/watch?v=JG_WnsNACF4)
 
 
